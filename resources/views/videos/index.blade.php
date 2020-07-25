@@ -30,16 +30,22 @@
                                 <th>Description</th>
                                 <th>Created At</th>
                                 <th>Status</th>
+                                <th></th>
                             </tr>
                             </thead>
                             <tbody>
                             @foreach($videos as $video)
                                 <tr>
                                     <td>{{ $video->id }}</td>
-                                    <td><a href="{{route('videos.show', $video->id)}}">{{ $video->name }}</a></td>
+                                    <td>{{ $video->name }}</td>
                                     <td>{{ $video->description }}</td>
                                     <td>{{ $video->created_at }}</td>
                                     <td>{{ $video->ready ? 'ready' : 'pending' }}</td>
+                                    <td>
+                                        <a class="ml-3 btn btn-light-blue btn-sm" href="{{ route('videos.show', $video->id) }}">
+                                            <i class="fas pr-2 fa-arrow-left"></i>
+                                        </a>
+                                    </td>
                                 </tr>
                             @endforeach
                             </tbody>

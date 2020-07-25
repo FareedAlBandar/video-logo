@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Bandage') }}</title>
+    <title>{{ config('app.name', 'Logo') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -54,6 +54,8 @@
 
 <!-- Main -->
 <main class="pt-5 mb-5 mx-lg-5">
+
+    <h1 style="text-align:center">Logo adder!</h1>
 
     @yield('content')
 
