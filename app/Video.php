@@ -20,7 +20,7 @@ class Video extends Model
         static::creating(function ($video) {
             $file_path = Storage::disk('public')->path($video->file);
             $logo = Storage::disk('public')->path("logo/logo.png");
-            shell_exec('ffmpeg -y -i'. $file_path .'-i'. $logo .'-filter_complex "overlay=10:10"'. $file_path);
+            shell_exec('ffmpeg -y -i '. $file_path .' -i '. $logo .' -filter_complex "overlay=10:10" '. $file_path);
         });
     }
 
