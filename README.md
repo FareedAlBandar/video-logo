@@ -23,7 +23,7 @@ memory_limit = 1000M
 
 Or you could use even larger values, it's up to you.
 
-You'll also need to have ffmpeg installed on your machine, if you don't have ot already, just run:
+You'll also need to have ffmpeg installed on your machine, if you don't have it already, just run:
 ```bash
 $ apt install ffmpeg
 ```
@@ -44,6 +44,12 @@ $ nano .env
 ```
 
 And in the `.env` file, edit the database section to use your own details and credentials.
+
+And then:
+
+```bash
+$ php artisan migrate
+```
 
 ## Next steps:
 
