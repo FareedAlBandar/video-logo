@@ -11,4 +11,4 @@
 |
 */
 
-Route::resource('', 'VideoController')->only(['index', 'show', 'store']);
+Route::resource('', 'VideoController')->name('videos')->only(['index', 'show', 'store']);
