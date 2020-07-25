@@ -15,8 +15,9 @@ class Video extends Model
      *
      * @return void
      */
-    protected static function booted()
+    protected static function boot()
     {
+        parent::boot();
         static::created(function ($video) {
             $file_path = Storage::disk('public')->path($video->file);
             $logo = Storage::disk('public')->path("logo/logo.png");
