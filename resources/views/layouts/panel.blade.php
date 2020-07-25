@@ -49,13 +49,13 @@
 <div id="app">
 
 <header>
-
+    <h1 style="text-align:center">Logo adder!</h1>
 </header>
 
 <!-- Main -->
 <main class="pt-5 mb-5 mx-lg-5">
 
-    <h1 style="text-align:center">Logo adder!</h1>
+
 
     @yield('content')
 
