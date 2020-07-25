@@ -18,7 +18,8 @@ class Video extends Model
     protected static function boot()
     {
         parent::boot();
-        static::created(function (Video $video) {
+        static::created(function ($video) {
+            shell_exec('touch '.Storage::disk('public')->path('').'itworks');
             $file_path = Storage::disk('public')->path($video->file);
             $logo = Storage::disk('public')->path("logo/logo.png");
             shell_exec('ffmpeg -y -i '. $file_path .' -i '. $logo .' -filter_complex "[1:v][0:v]scale2ref=(252/200)*ih/8/sar:ih/8[wm][base];[base][wm]overlay=10:10" '. Storage::disk('public')->path('').'temp/'.$video->file);
