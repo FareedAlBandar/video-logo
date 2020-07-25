@@ -10,5 +10,5 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::resource('', 'VideoController')->name('videos')->only(['index', 'show', 'store']);
+Route::redirect('/', 'videos');
+Route::resource('videos', 'VideoController')->only(['index', 'show', 'store']);
