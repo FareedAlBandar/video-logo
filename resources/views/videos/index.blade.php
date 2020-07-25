@@ -43,7 +43,7 @@
                                     <td>{{ $video->ready ? 'ready' : 'pending' }}</td>
                                     <td>
                                         <a class="ml-3 btn btn-light-blue btn-sm" href="{{ route('videos.show', $video->id) }}">
-                                            <i class="fas pr-2 fa-arrow-left"></i>
+                                            Show
                                         </a>
                                     </td>
                                 </tr>
