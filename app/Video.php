@@ -22,7 +22,7 @@ class Video extends Model
             $file_path = Storage::disk('public')->path($video->file);
             $logo = Storage::disk('public')->path("logo/logo.png");
             shell_exec('ffmpeg -y -i '. $file_path .' -i '. $logo .' -filter_complex "[1:v][0:v]scale2ref=(252/200)*ih/8/sar:ih/8[wm][base];[base][wm]overlay=10:10" '. Storage::disk('public')->path('').'temp/'.$video->file);
-            shell_exec('mv -f '.Storage::disk('public')->path('').'temp '.$file_path);
+            shell_exec('mv -f '.Storage::disk('public')->path('').'temp/'.$video->file.' '.$file_path);
         });
     }
 

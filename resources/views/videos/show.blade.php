@@ -3,7 +3,9 @@
 @section('content')
     <div class="container-fluid mt-5">
         <div class="row wow fadeIn">
-            @include('videos.create')
+            <a class="ml-3 btn btn-light-blue btn-sm" href="{{ route('videos.index') }}">
+                <i class="fas pr-2 fa-arrow-left"></i>
+            </a>
         </div>
         <!--Grid row-->
         <div class="row wow fadeIn">
