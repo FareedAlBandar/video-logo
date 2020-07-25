@@ -18,6 +18,7 @@ class CreateVideosTable extends Migration
             $table->string('name')->nullable();
             $table->text('description')->nullable();
             $table->string('file')->nullable();
+            $table->boolean('ready')->default(false);
             $table->timestamps();
         });
     }

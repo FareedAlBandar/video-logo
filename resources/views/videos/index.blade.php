@@ -29,6 +29,7 @@
                                 <th>Name</th>
                                 <th>Description</th>
                                 <th>Created At</th>
+                                <th>Status</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -38,6 +39,7 @@
                                     <td><a href="{{route('videos.show', $video->id)}}">{{ $video->name }}</a></td>
                                     <td>{{ $video->description }}</td>
                                     <td>{{ $video->created_at }}</td>
+                                    <td>{{ $video->ready ? 'ready' : 'pending' }}</td>
                                 </tr>
                             @endforeach
                             </tbody>
